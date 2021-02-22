@@ -17,8 +17,8 @@ fi
 if [ ! -z ${CODESPACES_SSH_KEY_PRIVATE+x} ]; 
 then
   mkdir ~/.ssh/
-  echo $CODESPACES_SSH_KEY_PRIVATE > ~/.ssh/id_ed25519
-  echo $CODESPACES_SSH_KEY_PUBLIC > ~/.ssh/id_ed25519.pub
+  echo "$CODESPACES_SSH_KEY_PRIVATE" > ~/.ssh/id_ed25519
+  echo "$CODESPACES_SSH_KEY_PUBLIC" > ~/.ssh/id_ed25519.pub
   chmod 600 ~/.ssh/id_ed25519
   chmod 600 ~/.ssh/id_ed25519.pub
   eval $(ssh-agent)
